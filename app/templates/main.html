@@ -1,0 +1,92 @@
+{% load static %}
+<html>
+    <head>
+        <title>Dog Vision - Predict your dog's breed</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link rel="shortcut icon" href="https://favicon.io/emoji-favicons/dog-face/">
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static '/favicon/apple-touch-icon.png' %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static '/favicon/favicon-16x16.png' %}">
+<link rel="manifest" href="{% static '/favicon/site.webmanifest' %}">
+        <style>
+          a:hover{
+            text-decoration: none;
+          }
+        </style>
+      </head>
+    <body>
+        <div class="container-fluid p-3 bg-primary text-light text-center">
+            <h1>DOG VISION</h1>
+            <blockquote class="blockquote">Click and Predict your dog's breed !! 🐶</blockquote>
+            <div class="dropdown">
+              <button type="button" class="btn btn-primary dropdown-toggle container-fluid" data-toggle="dropdown">
+                Project Description
+              </button>
+              <div class="dropdown-menu container-fluid bg-primary font-weight-light text-light text-center">
+                <p>It's a Computer Vision based application of Deep Learning.<br>The neural network model used in the project is ResNet(with Transfer Learning) and a Softmax function at the output layer optimized with Adam Optimizer.<br>Frameworks: Tensorflow and Keras for Deep Learning and Django for Deployment<br>Frontend Stack:Html, Css, jQuery, Bootstrap</p>
+              </div>
+            </div>
+        </div>
+
+
+
+
+
+        {% block content %}
+        {% endblock %}
+           <div class="container-fluid fixed-bottom p-3 bg-primary text-center"> 
+                <a href="https://twitter.com/HaswaniVaibhav" class="fa fa-lg fa-twitter text-light"></a>&nbsp;&nbsp;
+                <a href="https://www.linkedin.com/in/vaibhav-haswani-2078b888" class="fa fa-lg fa-linkedin text-light"></a>&nbsp;&nbsp;
+                <a href="https://www.instagram.com/haswani.vaibhav/" class="fa fa-lg fa-instagram text-light"></a>&nbsp;&nbsp;
+                <a href="https://github.com/VaibhavHaswani" class="fa fa-lg fa-github text-light"></a><br><br>
+                <footer class="blockquote-footer text-dark">A Computer Vision application for Dogs, made with 🧡 by <span class="font-weight-bold">Vaibhav Haswani</span></footer>
+                <br>
+            </div>
+
+
+            <!-- Modal
+            <div class="modal fade" id="pred" role="dialog">
+              <div class="modal-dialog">
+              
+                <!-- Modal content--
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Predictions</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    
+                  </div>
+                  <div class="modal-body text-center">
+                    
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                
+              </div>
+            </div>                  -->
+           <script>
+           
+                // name of the file will appear on select
+                $(".custom-file-input").on("change", function() {
+                  var fileName = $(this).val().split("\\").pop();
+                  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+                });
+      
+    $("#sub").on('click',function() {
+      // disable button
+      // add spinner to button
+      $("#bt").hide();
+      $(this).addClass("spinner-border text-primary");
+
+    });
+
+           </script>
+    </body>
+</html>

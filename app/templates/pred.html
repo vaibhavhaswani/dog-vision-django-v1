@@ -1,0 +1,23 @@
+ {% extends 'main.html'%}
+
+ {% block content%}
+ <div class="container text-center">
+ <br>
+ <img class="rounded img-thumbnail" src={{ imgurl }} alt="YOUR DOG" width="200" height="200"> 
+ <br><br>
+ <h5 class="text-muted">Prediction Results:</h5>
+ <br>
+
+    <div class="card bg-success">
+    	<div class="card-header text-light">Your Dog Looks Like</div>
+      <div class="card-body text-center">
+        <h5 class="card-text text-dark">{{ pred }}</h5>
+      </div>
+    </div>
+    <br>
+    <div>
+    <p><span class="font-weight-bold">NOTE:</span> The Project is under development, and I am still improving the model.(Make sure your pictures have proper lightining conditions)</p></div>
+ </div>
+ <br> <br><br><br><br>
+  
+ {% endblock  %}

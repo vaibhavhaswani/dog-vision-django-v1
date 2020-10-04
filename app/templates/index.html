@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+{% block content %}
+            <div class="container text-center p-4">
+                <br><br>
+              <h5 class="text-center">Hey! Upload your dog's photo and we'll predict your dog's breed.</h5><br><br>
+              <br>
+              <form method = "post" enctype="multipart/form-data">
+              {% csrf_token %}
+                <p>UPLOAD HERE:</p>
+                <div class="custom-file mb-3">
+                  <input type="file"  multiple accept='image/*' class="custom-file-input" id="customFile" name="dog">
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+                <div class="mt-3" id="sub">
+                  <button type="submit" class="btn btn-primary" id="bt">Predict</button>
+                </div>
+            </form>
+            </div>
+            {% endblock %}
